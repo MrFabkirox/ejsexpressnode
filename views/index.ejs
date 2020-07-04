@@ -1,38 +1,39 @@
 <html>
 
 <head>
-
 </head>
 
 </body>
 
-<div class="row">
-<div class="col-lg-4"></div>
-<div class="col-lg-4">
+  <div class="row">
+    <div class="col-lg-4"></div>
+      <div class="col-lg-4">
 
-  <h3>You Searched For : [<%= data.userQuery %>]</h3>
+      <h3>You Searched For : [<%= data.userQuery %>]</h3>
 
-  <% if(data.loggedIn) { %>
-    <h3>// 1 2  You are logged in as : <%= data.username %> </h3>
-  <% } %>
+      <% if(data.loggedIn) { %>
+        <h3>// 1 2  You are logged in as : <%= data.username %> </h3>
+      <% } %>
 
-  <h3>// 1 2 // 1 1</h3>
-  <ul>
-    <li>[<%= data.searchResults[0] %>]</li>
-    <li>dummy data</li>
-  </ul>
+      <h3>// 1 2 // 1 1</h3>
 
-  <h3>// 1 2 // 1 1</h3>
-  <ul>
-    <% data.searchResults.forEach(result=> { %>
-      <li>[<%= result %>]</li>
-    <% }); %>
-  </ul>
+      <ul>
+        <li>[<%= data.searchResults[0] %>]</li>
+        <li>dummy data</li>
+      </ul>
 
-<div class="col-lg-4"></div>
-</div>
+      <h3>// 1 2 // 1 1</h3>
 
-<script src="/public/js/example.js"></script>
+      <ul>
+        <% data.searchResults.forEach(result=> { %>
+          <li>[<%= result %>]</li>
+        <% }); %>
+      </ul>
+
+    <div class="col-lg-4"></div>
+  </div>
+
+  <script src="/public/js/example.js"></script>
 
 </body>
 </html>
